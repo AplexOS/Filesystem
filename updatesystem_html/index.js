@@ -17,8 +17,7 @@ function uploadFile(btn) {
     xhr.addEventListener("error", uploadFailed, false);
     xhr.addEventListener("abort", uploadCanceled, false);
 
-    console.log(frame_argv["path"]);
-    xhr.open("POST", frame_argv["path"] + "/backend.php");
+    xhr.open("POST", "/backend.php");
 
     xhr.send(fd);
 }
