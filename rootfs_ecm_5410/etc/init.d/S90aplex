@@ -1,6 +1,6 @@
 #!/bin/sh
 
-boa &
+#boa &
 
 echo 44 > /sys/class/gpio/export
 echo 29 > /sys/class/gpio/export
@@ -41,19 +41,19 @@ echo in > /sys/class/gpio/gpio50/direction
 echo in > /sys/class/gpio/gpio51/direction
 echo in > /sys/class/gpio/gpio44/direction
 
-echo 1 > /sys/class/gpio/gpio29/value
-echo 1 > /sys/class/gpio/gpio60/value
-echo 1 > /sys/class/gpio/gpio31/value
-echo 1 > /sys/class/gpio/gpio62/value
-echo 1 > /sys/class/gpio/gpio63/value
-echo 1 > /sys/class/gpio/gpio56/value
-echo 1 > /sys/class/gpio/gpio57/value
-echo 1 > /sys/class/gpio/gpio58/value
-echo 1 > /sys/class/gpio/gpio59/value
-echo 1 > /sys/class/gpio/gpio52/value
-echo 1 > /sys/class/gpio/gpio53/value
-echo 1 > /sys/class/gpio/gpio54/value
-echo 1 > /sys/class/gpio/gpio55/value
+#echo 1 > /sys/class/gpio/gpio29/value
+#echo 1 > /sys/class/gpio/gpio60/value
+#echo 1 > /sys/class/gpio/gpio31/value
+#echo 1 > /sys/class/gpio/gpio62/value
+#echo 1 > /sys/class/gpio/gpio63/value
+#echo 1 > /sys/class/gpio/gpio56/value
+#echo 1 > /sys/class/gpio/gpio57/value
+#echo 1 > /sys/class/gpio/gpio58/value
+#echo 1 > /sys/class/gpio/gpio59/value
+#echo 1 > /sys/class/gpio/gpio52/value
+#echo 1 > /sys/class/gpio/gpio53/value
+#echo 1 > /sys/class/gpio/gpio54/value
+#echo 1 > /sys/class/gpio/gpio55/value
 
 if [ -e /on-off.file ]; then
     on-off
@@ -61,9 +61,6 @@ fi
 
 read_5410_mac
 
-reset_ip &
-
-ln -s /dev/ttyO0    /dev/ttyS0
 ln -s /dev/ttyO1    /dev/ttyS1
 ln -s /dev/ttyO5    /dev/ttyS2
 ln -s /dev/ttysWZA0 /dev/ttyS3
@@ -83,9 +80,11 @@ ln -s /dev/ttysWZC3 /dev/ttyS16
 
 ln -s /sys/class/gpio/gpio62/value   /dev/GPIO_A
 ln -s /sys/class/gpio/gpio63/value   /dev/GPIO_B
+
 ln -s /sys/class/gpio/gpio60/value   /dev/LED_GPIO_0
 ln -s /sys/class/gpio/gpio31/value   /dev/LED_GPIO_1
-ln -s /sys/class/gpio/gpio29/value   /dev/IO_LED1
+ln -s /sys/class/gpio/gpio29/value   /dev/RUN_LED
+
 ln -s /sys/class/gpio/gpio44/value   /dev/RESET_IP
 
 ln -s /sys/class/gpio/gpio48/value   /dev/DI0
@@ -103,3 +102,4 @@ ln -s /sys/class/gpio/gpio57/value   /dev/GPIO2
 ln -s /sys/class/gpio/gpio58/value   /dev/GPIO3
 ln -s /sys/class/gpio/gpio59/value   /dev/GPIO4
 
+reset_ip &
