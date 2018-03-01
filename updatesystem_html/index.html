@@ -1,0 +1,69 @@
+<div>
+  <table align="center" width="80%">
+    <tr>
+        <td class="UpdateSystemTableTd_Info">
+          <label for="fileToUpload">MLO</label>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="file" id="MLO_fileToUpload" onchange="fileSelected();"/>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="button" onclick="uploadFile(this)" name="upload_MLO" value="Upload" />
+        </td>
+        <td class='UpdateSystemTableTd'>
+          <img src='img/error.png' width='30' height='30' id='MLO_update_status'/>
+        </td>
+    </tr>
+    <tr>
+        <td class="UpdateSystemTableTd_Info">
+          <label for="fileToUpload">u-boot.img</label>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="file" id="u-boot.img_fileToUpload" onchange="fileSelected();"/>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="button" onclick="uploadFile(this)" name="upload_u-boot.img" value="Upload" />
+        </td>
+        <td class='UpdateSystemTableTd'>
+          <img src='img/error.png' width='30' height='30' id='u-boot.img_update_status'/>
+        </td>
+    </tr>
+    <tr>
+        <td class="UpdateSystemTableTd_Info">
+          <label for="fileToUpload">uImage</label>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="file" id="uImage_fileToUpload" onchange="fileSelected();"/>
+        </td>
+        <td class="UpdateSystemTableTd">
+          <input type="button" onclick="uploadFile(this)" name="upload_uImage" value="Upload" />
+        </td>
+        <td class='UpdateSystemTableTd'>
+          <img src='img/error.png' width='30' height='30' id='uImage_update_status'/>
+        </td>
+    </tr>
+    <tr>
+        <td class="UpdateSystemTableTd_Info">
+          <label for="fileToUpload">ubi.img</label>
+        </td>
+        <td class="UpdateSystemTableTd_Select">
+          <input type="file"id="ubi.img_fileToUpload" onchange="fileSelected();"/>
+        </td>
+        <td class="UpdateSystemTableTd_Update">
+          <input type="button" onclick="uploadFile(this)" name="upload_ubi.img" value="Upload" />
+        </td>
+        <td class='UpdateSystemTableTd'>
+          <img src='img/error.png' width='30' height='30' id='ubi.img_update_status'/>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="4" class="UpdateSystemTableTd" align="center">
+        <progress style="width:50%" id="progressBar" max="100" value="0"></progress><label style="width:20%" id="progressBarPercent">0%</label>
+      </td>
+    </tr>
+  </table>
+  <br> <br> <br>
+  <hr>
+  <div id="showBack">
+  </div>
+<div>

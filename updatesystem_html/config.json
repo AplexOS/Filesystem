@@ -1,0 +1,14 @@
+{
+    "MLO" : {
+        "cmd" : "echo MLO > ~/test.txt"
+    },
+    "u-boot.img" : {
+        "cmd" : "echo u-boot.img > ~/test.txt"
+    },
+    "uImage" : {
+        "cmd" : "echo uImage > ~/test.txt"
+    },
+    "ubi.img" : {
+        "cmd" : "echo ubi.img > ~/test.txt"
+    }
+}
