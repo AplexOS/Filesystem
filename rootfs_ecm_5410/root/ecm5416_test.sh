@@ -88,15 +88,26 @@ else
 fi
 
 ifconfig eth0 192.168.2.11
-ifconfig eth1 192.168.2.12
-ifconfig eth2 192.168.2.13
-ifconfig eth3 192.168.2.14
-
-sleep 1
+sleep 2
 ping 192.168.2.100 -I eth0 -c 5
+ifconfig eth0 down
+
+ifconfig eth1 192.168.2.12
+sleep 2
 ping 192.168.2.100 -I eth1 -c 5
+ifconfig eth1 192.168.3.11
+
+ifconfig eth2 192.168.2.13
+sleep 2
 ping 192.168.2.100 -I eth2 -c 5
+ifconfig eth2 192.168.4.11
+
+ifconfig eth3 192.168.2.14
+sleep 2
 ping 192.168.2.100 -I eth3 -c 5
+ifconfig eth3 192.168.5.11
+
+ifconfig eth0 192.168.2.11
 
 echo 0 >  /dev/GPIO_A
 echo 0 >  /dev/GPIO_B

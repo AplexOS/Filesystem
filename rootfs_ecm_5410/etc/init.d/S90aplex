@@ -103,3 +103,4 @@ ln -s /sys/class/gpio/gpio58/value   /dev/GPIO3
 ln -s /sys/class/gpio/gpio59/value   /dev/GPIO4
 
 reset_ip &
+
