@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "*****************TTY test******************"
-tty_test5410
+tty_test5416
 
 echo "*****************DI DO test *****************"
 echo 0 > /dev/DO0
