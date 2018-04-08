@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#boa &
+
+read_at752_mac &
+
+ln -s /dev/ttyO1  /dev/ttyS1
+ln -s /dev/ttyO2  /dev/ttyS2
+ln -s /dev/ttyO5  /dev/ttyS3
+

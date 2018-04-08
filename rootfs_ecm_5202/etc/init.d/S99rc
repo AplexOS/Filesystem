@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#insmod  /lib/ch341.ko
+
+echo 29 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio29/direction 
+echo 0 > /sys/class/gpio/gpio29/value
+
+ln -s /sys/class/gpio/gpio29/value /dev/RUN_LED
+
+
+sysrunled  &
