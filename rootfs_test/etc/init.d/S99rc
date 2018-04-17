@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#insmod  /lib/ch341.ko
+
+insmod /usr/lib/asix.ko
+
+sysrunled  &
+
+canconfig can0 restart-ms 1000 bitrate 1000000 ctrlmode triple-sampling on
+canconfig can0 start
+sleep 1
+cansend can0 7ff#123456
+cansend can0 73f#112233
+cansend can0 7ff#889900
+cansend can0 73f#667788
+cansend can0 7ff#112233
+cansend can0 73f#334455
+
+

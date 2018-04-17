@@ -1,0 +1,360 @@
+{
+    "navigation" : {
+        "welcome" : {
+            "link" : "#welcome-to-arm-settings",
+            "content" : "Welcome to ARM-Settings"
+        },
+        "system_info" : {
+            "link" : "#base-infomation",
+            "content" : "Base Infomation"
+        },
+        "network" : {
+            "link" : "#network",
+            "content" : "Network"
+        },
+        "data_and_time" : {
+            "link" : "#dateAndTime",
+            "content" : "Date & Time"
+        },
+        "hardware_test" : {
+            "link" : "#hardware-test",
+            "content" : "Hardware Test"
+        }
+    },
+    "system_info" : {
+        "CPU" : {
+            "cmd" : {
+                "armv7l" : "grep Hardware /proc/cpuinfo | awk -F ':' '{print $2}' | sed 's/ Sabre-SD Board//g'",
+                "x86_64" : "cat /proc/cpuinfo | grep 'model name' | tail -n 1 | awk -F ':' '{print $2}' | xargs"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+
+        },
+        "Memery" : {
+            "cmd" : {
+                "armv7l" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'",
+                "x86_64" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "eMMC" : {
+            "cmd" : {
+                "armv7l" : "fdisk -l | grep mmcblk0: | awk -F ':' '{print $2}' | awk -F ',' '{print $1}'",
+                "x86_64" : "fdisk -l | grep /dev/sda | awk -F ':' '{print $2}' | awk -F ',' '{print $1}' | head -n 1 | xargs"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "eMMC_Available" : {
+            "cmd" : {
+                "armv7l" : "df -h | grep /dev/root | awk -F ' ' '{print $4}'",
+                "x86_64" : ""
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Operating_System_Type" : {
+            "cmd" : {
+                "armv7l" : "uname",
+                "x86_64" : "uname"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Linux_Version" : {
+            "cmd" : {
+                "armv7l" : "uname -a | awk -F ' ' '{print $3}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : "4.8.0-54-generic"
+            }
+        },
+        "MAC1" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth0 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC2" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth1 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC3" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth2 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC4" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth3 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        }
+    },
+    "network" : {
+        "dhcp" : {
+            "check_mode" : {
+                "armv7l" : "grep 'iface eth0 inet dhcp' /etc/network/interfaces",
+                "x86_64" : ""
+            }
+        },
+        "static" : {
+            "check_mode" : {
+                "armv7l" : "grep 'iface eth0 inet static' /etc/network/interfaces",
+                "x86_64" : ""
+            },
+            "ip" : {
+                "armv7l" : "ifconfig 'eth0' | grep 'inet ' | awk -F ' ' '{print $2}' | awk -F ':' '{print $2}'",
+                "x86_64" : ""
+            },
+            "netmask" : {
+                "armv7l" : "ifconfig 'eth0' | grep 'inet ' | awk -F ' ' '{print $4}' | awk -F ':' '{print $2}'",
+                "x86_64" : ""
+            },
+            "broadcast" : {
+                "armv7l" : "ifconfig 'eth0' | grep 'inet ' | awk -F ' ' '{print $3}' | awk -F ':' '{print $2}'",
+                "x86_64" : ""
+            },
+            "gateway" : {
+                "armv7l" : "route -n | grep UG | head -n  1 | awk -F ' ' '{print $2}'",
+                "x86_64" : "route -n | grep UG | head -n  1 | awk -F ' ' '{print $2}'"
+            }
+        },
+        "ping" : {
+            "ip" : "127.0.0.1"
+        }
+    },
+    "date_and_time" : {
+        "date" : {
+            "armv7l" : "date '+%Y-%m-%d'",
+            "x86_64" : "date '+%Y-%m-%d'"
+        },
+        "time" : {
+            "armv7l" : "date '+%H:%M'",
+            "x86_64" : "date '+%H:%M'"
+        }
+    },
+    "hardware_test" : {
+        "network1" : {
+            "index" : 1,
+            "descriptor" : "eth0",
+            "cmd" : "echo ok",
+            "status" : "error"
+        },
+        "network2" : {
+            "index" : 2,
+            "descriptor" : "eth1",
+            "cmd" : "ethtest.sh 1",
+            "status" : "error"
+        },
+        "network3" : {
+            "index" : 3,
+            "descriptor" : "eth2",
+            "cmd" : "ethtest.sh 2",
+            "status" : "error"
+        },
+         "network4" : {
+            "index" : 4,
+            "descriptor" : "eth3",
+            "cmd" : "ethtest.sh 3",
+            "status" : "error"
+        },
+        "ttyS1" : {
+            "index" : 5,
+            "descriptor" : "serial port1",
+            "cmd" : "serial_test /dev/ttyS1 /dev/ttyS2 | grep ok",
+            "status" : "error"
+        },
+        "ttyS2" : {
+            "index" : 6,
+            "descriptor" : "serial port2",
+            "cmd" : "serial_test /dev/ttyS2 /dev/ttyS1 | grep ok",
+            "status" : "error"
+        },
+        "ttyS3" : {
+            "index" : 7,
+            "descriptor" : "serial port3",
+            "cmd" : "serial_test /dev/ttyS3 /dev/ttyS4 | grep ok",
+            "status" : "error"
+        },
+        "ttyS4" : {
+            "index" : 8,
+            "descriptor" : "serial port4",
+            "cmd" : "serial_test /dev/ttyS4 /dev/ttyS3 | grep ok",
+            "status" : "error"
+        },
+        "ttyS5" : {
+            "index" : 9,
+            "descriptor" : "serial port5",
+            "cmd" : "serial_test /dev/ttyS5 /dev/ttyS6 | grep ok",
+            "status" : "error"
+        },
+        "ttyS6" : {
+            "index" : 10,
+            "descriptor" : "serial port6",
+            "cmd" : "serial_test /dev/ttyS6 /dev/ttyS5 | grep ok",
+            "status" : "error"
+        },
+        "ttyS7" : {
+            "index" : 11,
+            "descriptor" : "serial port7",
+            "cmd" : "serial_test /dev/ttyS7 /dev/ttyS8 | grep ok",
+            "status" : "error"
+        },
+        "ttyS8" : {
+            "index" : 12,
+            "descriptor" : "serial port8",
+            "cmd" : "serial_test /dev/ttyS8 /dev/ttyS7 | grep ok",
+            "status" : "error"
+        },
+        "ttyS9" : {
+            "index" : 13,
+            "descriptor" : "serial port9",
+            "cmd" : "serial_test /dev/ttyS9 /dev/ttyS10 | grep ok",
+            "status" : "error"
+        },
+        "ttyS10" : {
+            "index" : 14,
+            "descriptor" : "serial port10",
+            "cmd" : "serial_test /dev/ttyS10 /dev/ttyS9 | grep ok",
+            "status" : "error"
+        },
+        "ttyS11" : {
+            "index" : 15,
+            "descriptor" : "serial port11",
+            "cmd" : "serial_test /dev/ttyS11 /dev/ttyS12 | grep ok",
+            "status" : "error"
+        },
+        "ttyS12" : {
+            "index" : 16,
+            "descriptor" : "serial port12",
+            "cmd" : "serial_test /dev/ttyS12 /dev/ttyS11 | grep ok",
+            "status" : "error"
+        },
+        "ttyS13" : {
+            "index" : 17,
+            "descriptor" : "serial port13",
+            "cmd" : "serial_test /dev/ttyS13 /dev/ttyS14 | grep ok",
+            "status" : "error"
+        },
+        "ttyS14" : {
+            "index" : 18,
+            "descriptor" : "serial port14",
+            "cmd" : "serial_test /dev/ttyS14 /dev/ttyS13 | grep ok",
+            "status" : "error"
+        },
+        "ttyS15" : {
+            "index" : 19,
+            "descriptor" : "serial port15",
+            "cmd" : "serial_test /dev/ttyS15 /dev/ttyS16 | grep ok",
+            "status" : "error"
+        },
+        "ttyS16" : {
+            "index" : 20,
+            "descriptor" : "serial port16",
+            "cmd" : "serial_test /dev/ttyS16 /dev/ttyS15 | grep ok",
+            "status" : "error"
+        },
+        "DO0" : {
+            "index" : 21,
+            "descriptor" : "Digital Output 0",
+            "cmd" : "DIDOtest.sh 0",
+            "status" : "error"
+        },
+        "DO1" : {
+            "index" : 22,
+            "descriptor" : "Digital Output 1",
+            "cmd" : "DIDOtest.sh 1",
+            "status" : "error"
+        },
+        "DO2" : {
+            "index" : 23,
+            "descriptor" : "Digital Output 2",
+            "cmd" : "DIDOtest.sh 2",
+            "status" : "error"
+        },
+        "DO3" : {
+            "index" : 24,
+            "descriptor" : "Digital Output 3",
+            "cmd" : "DIDOtest.sh 3",
+            "status" : "error"
+        },
+        "DI0" : {
+            "index" : 25,
+            "descriptor" : "Digital Input 0",
+            "cmd" : "DIDOtest.sh 0",
+            "status" : "error"
+        },
+        "DI1" : {
+            "index" : 26,
+            "descriptor" : "Digital Input 1",
+            "cmd" : "DIDOtest.sh 1",
+            "status" : "error"
+        },
+        "DI2" : {
+            "index" : 27,
+            "descriptor" : "Digital Input 2",
+            "cmd" : "DIDOtest.sh 2",
+            "status" : "error"
+        },
+        "DI3" : {
+            "index" : 28,
+            "descriptor" : "Digital Input 3",
+            "cmd" : "DIDOtest.sh 3",
+            "status" : "error"
+        },
+        "GPIO1" : {
+            "index" : 29,
+            "descriptor" : "Gpio port 1",
+            "cmd" : "gpio_test.sh 1",
+            "status" : "error"
+        },
+        "GPIO2" : {
+            "index" : 30,
+            "descriptor" : "Gpio port 2",
+            "cmd" : "gpio_test.sh 1",
+            "status" : "error"
+        },
+        "GPIO3" : {
+            "index" : 31,
+            "descriptor" : "Gpio port 3",
+            "cmd" : "gpio_test.sh 2",
+            "status" : "error"
+        },
+        "GPIO4" : {
+            "index" : 32,
+            "descriptor" : "Gpio port 4",
+            "cmd" : "gpio_test.sh 2",
+            "status" : "error"
+        },
+        "USB1" : {
+            "index" : 33,
+            "descriptor" : "USB port 1",
+            "cmd" : "ls /dev/sda*",
+            "status" : "error"
+        },
+        "USB2" : {
+            "index" : 34,
+            "descriptor" : "USB port 2",
+            "cmd" : "ls /dev/sdb*",
+            "status" : "error"
+        }
+    }
+}
