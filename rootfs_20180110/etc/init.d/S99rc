@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sysrunled &
+
+insmod /lib/ch341.ko
+insmod /usr/lib/asix.ko

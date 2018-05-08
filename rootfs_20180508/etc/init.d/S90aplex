@@ -1,0 +1,38 @@
+#!/bin/sh
+
+
+echo 29  > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio29/direction
+echo 44  > /sys/class/gpio/export
+
+echo 110  > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio110/direction
+# echo 1 > /sys/class/gpio/gpio110/value
+
+echo 111  > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio111/direction
+# echo 1 > /sys/class/gpio/gpio111/value
+
+# snmpd -c /usr/share/snmp/snmpd.conf &
+
+boa &
+echo "Boa server start ..."
+
+if [ -e /on-off.file ]; then
+    on-off
+fi
+
+vsftpd &
+# openvpn --daemon --script-security 3  --config /usr/local/etc/server.conf &
+reset_ip &
+read_7816_mac &
+
+
+ln -s /dev/ttyUSB0 /dev/ttyS1
+ln -s /dev/ttyO5 /dev/ttyS2
+ln -s /dev/ttyO4 /dev/ttyS3
+ln -s /dev/ttyO3 /dev/ttyS4
+ln -s /dev/ttyO2 /dev/ttyS5
+ln -s /dev/ttyO1 /dev/ttyS6
+
+ifconfig eth0 192.168.2.10
