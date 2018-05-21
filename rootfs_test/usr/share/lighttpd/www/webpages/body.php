@@ -43,6 +43,7 @@
           <!-- <?php include 'upload_system.php'; ?> -->
 
           <?php include 'hardware_test.php'; ?>
+          <?php include 'LED_test.php'; ?>
 
           <footer>
             <hr/>
