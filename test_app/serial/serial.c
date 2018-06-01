@@ -16,13 +16,21 @@ int set_opt(int fd, int nSpeed, int nBits, char nEvent, int nStop);
 
 int main(int argc, char *argv[])
 {
-    int tty_fd[3], ret_val = -1, i, count[2];
-    char device_name[3][32], *write_chr = "abcd0123456789\0", read_chr[32];
+    int tty_fd[2], ret_val = -1, i, count[2];
+    char device_name[2][32], *write_chr = "abcd0123456789\0", read_chr[32];
 
-    for (i = 0; i < 3; i++)
+    if (argc < 2)
     {
-        sprintf(device_name[i], "/dev/ttyS%d", (i + 1));
+        goto HELP_FLAG;
+    }
+
+
+    for (i = 0; i < 2; i++)
+    {
+        sprintf(device_name[i], argv[i + 1]);
         tty_fd[i] = open(device_name[i], O_RDWR | O_NOCTTY | O_NDELAY);
+        set_opt(tty_fd[i], 115200, 8, 'n', 1);
+
         if(tty_fd[i] < 0)
             perror(device_name[i]);
     }
@@ -30,37 +38,53 @@ int main(int argc, char *argv[])
     i = 10;
     while(i--)
     {
-        ret_val = write(tty_fd[0], write_chr, sizeof(write_chr));
-        if(ret_val < 0)
-            printf("%s write error\n", tty_fd[0]);
+        write(tty_fd[0], write_chr, 32);
 
-        ret_val = write(tty_fd[2], write_chr, sizeof(write_chr));
+        usleep(300 * 1000);
 
-        if(ret_val < 0)
-            printf("%s write error\n", tty_fd[0]);
+        read(tty_fd[1], read_chr, 32);
 
-        usleep(200 * 1000);
+        printf("%s %s\n", read_chr, device_name[1]);
+        printf("%s %s\n", write_chr, device_name[1]);
 
-        ret_val = read(tty_fd[1], read_chr, sizeof(read_chr));
-        if ( !strcmp(read_chr, write_chr) )
-            printf("%s send ok,  %s recv ok\n", device_name[0], device_name[1]);
+        if (!strcmp(read_chr, write_chr))
+            printf("%s recv ok\n\n", device_name[1]);
         else
-            printf("%s send fail,  %s recv fail*****************************\n", device_name[0], device_name[1]);
+            printf("%s recv fail\n\n", device_name[1]);
 
+        usleep(300 * 1000);
 
-        ret_val = read(tty_fd[2], read_chr, sizeof(read_chr));
-        if ( !strcmp(read_chr, write_chr) )
-            printf("%s test ok \n", device_name[2]);
+        write(tty_fd[1], write_chr, 32);
+
+        usleep(300 * 1000);
+
+        read(tty_fd[0], read_chr, 32);
+
+        printf("%s %s\n", read_chr, device_name[0]);
+        printf("%s %s\n", write_chr, device_name[0]);
+
+        if (!strcmp(read_chr, write_chr))
+            printf("%s recv ok\n\n", device_name[0]);
         else
-            printf("%s test fail \n", device_name[2]);
-        usleep(100 * 1000);
+            printf("%s recv fail\n\n", device_name[0]);
+
+        usleep(300 * 1000);
     }
 
-
-    for (i = 0; i < 3; i++)
-        close(tty_fd[i + 1]);
+    for (i = 0; i < 2; i++)
+        close(tty_fd[i]);
 
     return 0;
+
+HELP_FLAG:
+    printf("argc[1] : firstsend\n\
+            argc[2] : firstrecv \n\
+            ex: \n\
+                ./serial_test  /dev/ttyS1  /dev/ttyS2 \n\
+                ./serial_test  /dev/ttyS3  /dev/ttyS3 \n");
+
+    return -1;
+
 }
 
 int set_opt(int fd, int nSpeed, int nBits, char nEvent, int nStop)
