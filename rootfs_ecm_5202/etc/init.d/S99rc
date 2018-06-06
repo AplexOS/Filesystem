@@ -1,20 +1,2 @@
 #!/bin/sh
 
-insmod  /usr/lib/ch341.ko
-
-echo 29 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio29/direction
-echo 0 > /sys/class/gpio/gpio29/value
-ln -s /sys/class/gpio/gpio29/value /dev/RUN_LED
-
-echo 115 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio115/direction
-echo 0 > /sys/class/gpio/gpio115/value
-ln -s /sys/class/gpio/gpio115/value /dev/GPIO6
-
-echo 116 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio116/direction
-echo 0 > /sys/class/gpio/gpio116/value
-ln -s /sys/class/gpio/gpio116/value /dev/GPIO7
-
-sysrunled  &
