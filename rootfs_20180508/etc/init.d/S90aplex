@@ -36,3 +36,8 @@ ln -s /dev/ttyO2 /dev/ttyS5
 ln -s /dev/ttyO1 /dev/ttyS6
 
 ifconfig eth0 192.168.2.10
+
+sysrunled &
+
+insmod /lib/ch341.ko
+insmod /lib/asix.ko
