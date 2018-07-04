@@ -1,0 +1,192 @@
+{
+    "navigation" : {
+        "welcome" : {
+            "link" : "#welcome-to-arm-settings",
+            "content" : "Welcome to ARM-Settings"
+        },
+        "hardware_operation" : {
+            "link" : "#hardware-operation",
+            "content" : "Hardware Operation"
+        },
+        "DIDO_operation" : {
+            "link" : "#DIDO-operation",
+            "content" : "DIDO Operation"
+        }
+    },
+    "system_info" : {
+        "CPU" : {
+            "cmd" : {
+                "armv7l" : "grep Hardware /proc/cpuinfo | awk -F ':' '{print $2}' | sed 's/ Sabre-SD Board//g'",
+                "x86_64" : "cat /proc/cpuinfo | grep 'model name' | tail -n 1 | awk -F ':' '{print $2}' | xargs"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+
+        },
+        "Memery" : {
+            "cmd" : {
+                "armv7l" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}'",
+                "x86_64" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Operating_System_Type" : {
+            "cmd" : {
+                "armv7l" : "uname",
+                "x86_64" : "uname"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Linux_Version" : {
+            "cmd" : {
+                "armv7l" : "uname -a | awk -F ' ' '{print $3}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : "4.8.0-54-generic"
+            }
+        },
+        "MAC1" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth0 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC2" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth1 | awk -F ' ' '{print $5}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            }
+        }
+    },
+    "hardware_test" : {
+        "LAN1" : {
+            "index" : 1,
+            "description" : "eth0",
+            "cmd" : "ping 192.168.3.138 -c 1 | grep 64",
+            "status" : "error"
+        },
+        "LAN2" : {
+            "index" : 2,
+            "description" : "eth1",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "UART1" : {
+            "index" : 3,
+            "description" : "DB9_RS232_COM1",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "UART2" : {
+            "index" : 4,
+            "description" : "DB9_RS485_COM2",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "UART3" : {
+            "index" : 5,
+            "description" : "DB9_RS485_COM3",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "I2C0" : {
+            "index" : 6,
+            "description" : "EEPROM",
+            "cmd" : "bin/hardware_test eeprom_test",
+            "status" : "error"
+        },
+        "I2C1" : {
+            "index" : 7,
+            "description" : "MIO_I2C",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "CAN0" : {
+            "index" : 8,
+            "description" : "DB9_CAN",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "CAN1" : {
+            "index" : 9,
+            "description" : "MIO_CAN",
+            "cmd" : "",
+            "status" : "error"
+        },
+        "USB0" : {
+            "index" : 10,
+            "description" : "USB0_PORT",
+            "cmd" : "ls /dev/sd*   /dev/input/event*",
+            "status" : "error"
+        },
+        "USB1" : {
+            "index" : 11,
+            "description" : "USB1_typeA",
+            "cmd" : "ls /dev/sd*  /dev/input/event**",
+            "status" : "error"
+        }
+    },
+    "external_interface" : {
+        "LAN1" : {
+            "index" : 1,
+            "description" : "eth0"
+        },
+        "LAN2" : {
+            "index" : 2,
+            "description" : "eth1"
+        },
+        "UART1" : {
+            "index" : 3,
+            "description" : "DB9_RS232_COM1"
+        },
+        "UART2" : {
+            "index" : 4,
+            "description" : "DB9_RS485_COM2"
+        },
+        "UART3" : {
+            "index" : 5,
+            "description" : "DB9_RS485_COM3"
+        },
+        "I2C0" : {
+            "index" : 6,
+            "description" : "EEPROM"
+        },
+        "I2C1" : {
+            "index" : 7,
+            "description" : "MIO_I2C"
+        },
+        "CAN0" : {
+            "index" : 8,
+            "description" : "DB9_CAN"
+        },
+        "CAN1" : {
+            "index" : 9,
+            "description" : "MIO_CAN"
+        },
+        "USB0" : {
+            "index" : 10,
+            "description" : "USB0_PORT"
+        },
+        "USB1" : {
+            "index" : 11,
+            "description" : "USB1_typeA"
+        }
+    },
+    "hardware_operation" : {
+        "LED1" : {
+            "index" : 1,
+            "cmd_on" : "echo 29 > /sys/class/gpio/export; echo out > /sys/class/gpio/gpio29/direction; echo 1 > /sys/class/gpio/gpio29/value",
+            "cmd_off" : "echo 0 > /sys/class/gpio/gpio29/value; echo 29 > /sys/class/gpio/unexport"
+        }
+    }
+}

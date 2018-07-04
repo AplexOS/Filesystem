@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+ln -s /dev/ttyS0  /dev/ttyO0
