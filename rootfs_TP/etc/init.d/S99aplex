@@ -13,3 +13,9 @@ ln -s /dev/ttyS1  /dev/ttyO1
 ln -s /dev/ttyS2  /dev/ttyO2
 ln -s /dev/ttyS3  /dev/ttyO3
 
+/etc/init.d/S40network restart
+
+if [ -e /on-off.file ]; then
+    on-off
+fi
+
