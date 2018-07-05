@@ -6,7 +6,7 @@ echo 22 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio22/direction
 echo 0 > /sys/class/gpio/gpio22/value
 
-insmod  /lib/modules/asix.ko
+insmod  /lib/asix.ko
 
 ln -s /dev/ttyS0  /dev/ttyO0
 ln -s /dev/ttyS1  /dev/ttyO1
