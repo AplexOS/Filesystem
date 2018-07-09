@@ -1,0 +1,211 @@
+{
+    "navigation" : {
+        "welcome" : {
+            "link" : "#welcome-to-arm-settings", 
+            "content" : "Welcome to ARM-Settings"
+        },
+        "system_info" : {
+            "link" : "#base-infomation", 
+            "content" : "Base Infomation"
+        },
+        "hardware_test" : {
+            "link" : "#hardware-test",
+            "content" : "Hardware Test"
+        }
+    },
+    "system_info" : {
+        "CPU" : {
+            "cmd" : {
+                "armv7l" : "grep Hardware /proc/cpuinfo | awk -F ':' '{print $2}' | sed 's/ Sabre-SD Board//g'",
+                "x86_64" : "cat /proc/cpuinfo | grep 'model name' | tail -n 1 | awk -F ':' '{print $2}' | xargs"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Memery" : {
+            "cmd" : {
+                "armv7l" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'",
+                "x86_64" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Operating_System_Type" : {
+            "cmd" : {
+                "armv7l" : "uname",
+                "x86_64" : "uname"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Linux_Version" : {
+            "cmd" : {
+                "armv7l" : "uname -a | awk -F ' ' '{print $3}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : "4.8.0-54-generic"
+            }
+        },
+        "MAC1" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth0 | awk -F ' ' '{print $5}' | sed 's/://g'  ",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC2" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth1 | awk -F ' ' '{print $5}' | sed 's/://g'  ",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        }
+
+    },
+    "hardware_test" : {
+        "USB0" : {
+            "index" : 1,
+            "descriptor" : "USB0",
+            "cmd" : "ls /dev/sda",
+            "status" : "error"
+        },
+        "USB1" : {
+            "index" : 2,
+            "descriptor" : "USB1",
+            "cmd" : "ls /dev/sdb",
+            "status" : "error"
+        },
+        "USB2" : {
+            "index" : 3,
+            "descriptor" : "USB2",
+            "cmd" : "ls /dev/sdc",
+            "status" : "error"
+        },
+        "USB3" : {
+            "index" : 4,
+            "descriptor" : "USB3",
+            "cmd" : "ls /dev/sdd",
+            "status" : "error"
+        },
+        "rtc" : {
+            "index" : 5,
+            "descriptor" : "rtc",
+            "cmd" : "hwclock -r",
+            "status" : "error"
+        },
+        "watchdog" : {
+            "index" : 6,
+            "descriptor" : "watchdog",
+            "cmd" : "ls /dev/watchdog",
+            "status" : "error"
+        },
+        "eeprom" : {
+            "index" : 7,
+            "descriptor" : "eeprom",
+            "cmd" : "echo 12345 >> /dev/eeprom  ; cat /dev/eeprom | grep 12345",
+            "status" : "error"
+        },
+       "GPIO_IN0" : {
+           "index" : 8,
+           "descriptor" : "gpio_in0",
+           "cmd" : "cat  /dev/GPIO_IN0 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_IN1" : {
+           "index" : 9,
+           "descriptor" : "gpio_in1",
+           "cmd" : "cat  /dev/GPIO_IN1 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_IN2" : {
+           "index" : 10,
+           "descriptor" : "gpio_in2",
+           "cmd" : "cat  /dev/GPIO_IN2 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_IN3" : {
+           "index" : 11,
+           "descriptor" : "gpio_in3",
+           "cmd" : "cat  /dev/GPIO_IN3 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_OUT0" : {
+           "index" : 12,
+           "descriptor" : "gpio_out0",
+           "cmd" : "cat  /dev/GPIO_IN0 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_OUT1" : {
+           "index" : 13,
+           "descriptor" : "gpio_out1",
+           "cmd" : "cat  /dev/GPIO_IN1 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_OUT2" : {
+           "index" : 14,
+           "descriptor" : "gpio_out2",
+           "cmd" : "cat  /dev/GPIO_IN2 | grep 1",
+           "status" : "error"
+        },
+       "GPIO_OUT3" : {
+           "index" : 15,
+           "descriptor" : "gpio_out3",
+           "cmd" : "cat  /dev/GPIO_IN3 | grep 1",
+           "status" : "error"
+        },
+       "buzzer" : {
+           "index" : 16,
+           "descriptor" : "buzzer",
+           "cmd" : "/etc/init.d/buzzer.sh",
+           "status" : "error"
+        },
+       "COM_RS232" : {
+           "index" : 17,
+           "descriptor" : "com_rs232",
+           "cmd" : "rs232_test",
+           "status" : "error"
+        },
+       "ETH0" : {
+           "index" : 18,
+           "descriptor" : "network port 0",
+           "cmd" : "echo ok",
+           "status" : "ok"
+        },
+       "ETH1" : {
+           "index" : 19,
+           "descriptor" : "network port 1",
+           "cmd" : "ping 192.168.2.100 -c 5 | grep 64",
+           "status" : "error"
+        },
+       "I2C2" : {
+           "index" : 20,
+           "descriptor" : "I2C port 2",
+           "cmd" : "cat /dev/I2C2_SCL | grep 1",
+           "status" : "error"
+        },
+       "CAN" : {
+           "index" : 21,
+           "descriptor" : "can port 0",
+           "cmd" : "cat /dev/CAN_RX | grep 1",
+           "status" : "error"
+        },
+       "PCIE" : {
+           "index" : 22,
+           "descriptor" : "PCIE card",
+           "cmd" : "ls /dev/ttyUSB*",
+           "status" : "error"
+        },
+       "SIM" : {
+           "index" : 23,
+           "descriptor" : "SIM",
+           "cmd" : "ifconfig | grep ppp0",
+           "status" : "error"
+        }
+    }
+}

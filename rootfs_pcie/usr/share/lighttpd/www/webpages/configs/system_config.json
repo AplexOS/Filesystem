@@ -1,0 +1,79 @@
+{
+    "navigation" : {
+        "welcome" : {
+            "link" : "#welcome-to-arm-settings", 
+            "content" : "Welcome to ARM-Settings"
+        },
+        "system_info" : {
+            "link" : "#base-infomation", 
+            "content" : "Base Infomation"
+        },
+        "hardware_test" : {
+            "link" : "#hardware-test",
+            "content" : "Hardware Test"
+        }
+    },
+    "system_info" : {
+        "CPU" : {
+            "cmd" : {
+                "armv7l" : "grep Hardware /proc/cpuinfo | awk -F ':' '{print $2}' | sed 's/ Sabre-SD Board//g'",
+                "x86_64" : "cat /proc/cpuinfo | grep 'model name' | tail -n 1 | awk -F ':' '{print $2}' | xargs"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Memery" : {
+            "cmd" : {
+                "armv7l" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'",
+                "x86_64" : "grep MemTotal /proc/meminfo | awk -F ':' '{print $2}' | awk -F ' ' '{print $1}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Operating_System_Type" : {
+            "cmd" : {
+                "armv7l" : "uname",
+                "x86_64" : "uname"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : ""
+            }
+        },
+        "Linux_Version" : {
+            "cmd" : {
+                "armv7l" : "uname -a | awk -F ' ' '{print $3}'",
+                "x86_64" : "uname -a | awk -F ' ' '{print $3}'"
+            },
+            "compare" : {
+                "armv7l" : "",
+                "x86_64" : "4.8.0-54-generic"
+            }
+        },
+        "MAC1" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth0 | awk -F ' ' '{print $5}' | sed 's/://g'  ",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        },
+        "MAC2" : {
+            "cmd" : {
+                "armv7l" : "ifconfig -a | grep eth1 | awk -F ' ' '{print $5}' | sed 's/://g'  ",
+                "x86_64" : "uname -a    | awk -F ' ' '{print $3}'"
+            }
+        }
+
+    },
+    "hardware_test" : {
+       "SIM" : {
+           "index" : 1,
+           "descriptor" : "SIM",
+           "cmd" : "ifconfig | grep ppp0",
+           "status" : "error"
+        }
+    }
+}

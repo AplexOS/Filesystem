@@ -1,0 +1,13 @@
+2000-01-03 23:00:29: (log.c.217) server started 
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr: PHP Fatal error:  Uncaught Error: Call to undefined function json_decode() in /usr/share/lighttpd/www/webpages/functions.php:20
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr: Stack trace:
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr: #0 /usr/share/lighttpd/www/webpages/functions.php(61): MiniOS_context->__construct()
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr: #1 /usr/share/lighttpd/www/webpages/index.php(8): include('/usr/share/ligh...')
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr: #2 {main}
+2000-01-03 23:01:14: (mod_fastcgi.c.2543) FastCGI-stderr:   thrown in /usr/share/lighttpd/www/webpages/functions.php on line 20
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr: PHP Fatal error:  Uncaught Error: Call to undefined function json_decode() in /usr/share/lighttpd/www/webpages/functions.php:20
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr: Stack trace:
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr: #0 /usr/share/lighttpd/www/webpages/functions.php(61): MiniOS_context->__construct()
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr: #1 /usr/share/lighttpd/www/webpages/index.php(8): include('/usr/share/ligh...')
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr: #2 {main}
+2000-01-04 00:06:14: (mod_fastcgi.c.2543) FastCGI-stderr:   thrown in /usr/share/lighttpd/www/webpages/functions.php on line 20

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+ln -s /sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/eeprom  /dev/eeprom
+
+
+/etc/init.d/gpio_set.sh &
+
+#/etc/init.d/audio_test.sh &
+
+ifconfig eth1 192.168.2.1
+
+pppd call gprs &
