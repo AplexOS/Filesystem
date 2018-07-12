@@ -2,7 +2,7 @@
 
 #eGTouchD &
 
-/usr/sbin/thttpd -d /srv/www -p 8080 &
+#/usr/sbin/thttpd -d /srv/www -p 8080 &
 
 /usr/program/read_7109_mac/read_7109_mac
 
