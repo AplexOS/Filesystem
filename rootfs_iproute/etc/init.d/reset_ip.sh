@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 passwd root <<EOF
 root
 root
@@ -11,3 +10,5 @@ rm /etc/ssh/ssh_host*
 sync
 
 ifconfig eth0 192.168.2.10
+
+/etc/init.d/S50sshd restart
