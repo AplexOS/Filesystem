@@ -1,0 +1,17 @@
+#! /bin/sh
+/etc/init.d/rc.pvr start
+export QTDIR=/usr/local/qt5
+export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/local/qt5/plugins
+export QT_QPA_PLATFORM=eglfs:fb=/dev/fb0
+export QT_QPA_FONTDIR=/usr/local/qt5/lib/fonts
+export QT_QPA_GENERIC_PLUGINS=evdevtablet:/dev/input/event0
+#export QT_QPA_EVDEV_MOUSE_PARAMETERS=/dev/input/event0
+export LD_LIBRARY_PATH=/usr/local/qt5/lib:$LD_LIBRARY_PATH
+export QML2_IMPORT_PATH=$QTDIR/qml
+#export QT_DEBUG_PLUGINS=1
+export PATH=/usr/local/qt5/bin:$PATH
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+export QT_QPA_EGLFS_KMS_CONFIG=/etc/qt5/eglfs_kms_cfg.json
+calendar &
+#cmi_at751_tools_qml &
+

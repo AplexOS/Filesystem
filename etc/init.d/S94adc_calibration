@@ -1,0 +1,44 @@
+
+cd  /sys/bus/iio/devices/iio\:device0/adc_calibration/
+
+
+# Initialize channel 1
+echo  0     > channel
+echo  true  > re_calibration
+
+echo  0     > d1in
+echo  0     > d2in
+echo  0     > d1out
+echo  0     > d2out
+
+echo  0     > channel
+echo  true  > calibration
+
+
+# Initialize channel 1
+
+echo  1     > channel
+echo  true  > re_calibration
+
+echo  0     > d1in
+echo  0     > d2in
+echo  0     > d1out
+echo  0     > d2out
+
+echo  1     > channel
+echo  true  > calibration
+
+
+# Initialize channel 2
+
+echo  2     > channel
+echo  true  > re_calibration
+
+echo  0     > d1in
+echo  0     > d2in
+echo  0     > d1out
+echo  0     > d2out
+
+echo  2     > channel
+echo  true  > calibration
+

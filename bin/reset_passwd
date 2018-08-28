@@ -1,0 +1,4 @@
+passwd root <<EOF
+root
+root
+EOF
