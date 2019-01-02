@@ -1,0 +1,364 @@
+2014-06-12 11:17:50: (log.c.164) server started 
+2014-06-12 11:17:50: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 11:27:05: (log.c.164) server started 
+2014-06-12 11:27:05: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 12:06:28: (log.c.164) server started 
+2014-06-12 12:06:28: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 12:09:20: (log.c.164) server started 
+2014-06-12 12:09:20: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 13:26:18: (log.c.164) server started 
+2014-06-12 13:26:18: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 14:08:01: (log.c.164) server started 
+2014-06-12 14:08:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 14:30:51: (log.c.164) server started 
+2014-06-12 14:30:51: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 14:38:16: (log.c.164) server started 
+2014-06-12 14:38:16: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:02:14: (log.c.164) server started 
+2014-06-12 15:02:14: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:04:06: (log.c.164) server started 
+2014-06-12 15:04:06: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:04:56: (server.c.1558) server stopped by UID = 0 PID = 1372 
+2014-06-12 15:05:53: (log.c.164) server started 
+2014-06-12 15:05:53: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 16:13:11: (log.c.164) server started 
+2014-06-12 16:13:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 16:21:46: (log.c.164) server started 
+2014-06-12 16:21:46: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 16:27:49: (log.c.164) server started 
+2014-06-12 16:27:49: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 16:45:05: (log.c.164) server started 
+2014-06-12 16:45:05: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 17:04:31: (log.c.164) server started 
+2014-06-12 17:04:31: (mod_fastcgi.c.1112) the fastcgi-backend /usr/share/web/php/bin/php-cgi failed to start: 
+2014-06-12 17:04:31: (mod_fastcgi.c.1116) child exited with status 2 /usr/share/web/php/bin/php-cgi 
+2014-06-12 17:04:31: (mod_fastcgi.c.1119) If you're trying to run your app as a FastCGI backend, make sure you're using the FastCGI-enabled version.
+If this is PHP on Gentoo, add 'fastcgi' to the USE flags. 
+2014-06-12 17:04:31: (mod_fastcgi.c.1406) [ERROR]: spawning fcgi failed. 
+2014-06-12 17:04:31: (server.c.1022) Configuration of plugins failed. Going down. 
+2014-06-12 17:08:38: (log.c.164) server started 
+2014-06-12 17:08:38: (mod_fastcgi.c.1112) the fastcgi-backend /usr/share/web/php/bin/php-cgi failed to start: 
+2014-06-12 17:08:38: (mod_fastcgi.c.1116) child exited with status 2 /usr/share/web/php/bin/php-cgi 
+2014-06-12 17:08:38: (mod_fastcgi.c.1119) If you're trying to run your app as a FastCGI backend, make sure you're using the FastCGI-enabled version.
+If this is PHP on Gentoo, add 'fastcgi' to the USE flags. 
+2014-06-12 17:08:38: (mod_fastcgi.c.1406) [ERROR]: spawning fcgi failed. 
+2014-06-12 17:08:38: (server.c.1022) Configuration of plugins failed. Going down. 
+2014-06-12 17:33:52: (log.c.164) server started 
+2014-06-12 17:33:52: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 09:59:44: (log.c.164) server started 
+2014-06-13 09:59:44: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 10:02:55: (log.c.164) server started 
+2014-06-13 10:02:55: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 10:05:52: (log.c.164) server started 
+2014-06-13 10:05:52: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 11:30:54: (log.c.164) server started 
+2014-06-13 11:30:54: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 15:02:39: (log.c.164) server started 
+2014-06-13 15:02:39: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 15:09:27: (log.c.164) server started 
+2014-06-13 15:09:27: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 16:20:02: (log.c.164) server started 
+2014-06-13 16:20:02: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 16:25:25: (log.c.164) server started 
+2014-06-13 16:25:25: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 16:30:30: (log.c.164) server started 
+2014-06-13 16:30:30: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-13 17:16:01: (log.c.164) server started 
+2014-06-13 17:16:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-17 08:56:15: (log.c.164) server started 
+2014-06-17 08:56:15: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-17 09:14:58: (log.c.164) server started 
+2014-06-17 09:14:58: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-18 15:28:07: (log.c.164) server started 
+2014-06-18 15:28:07: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-18 15:41:05: (log.c.164) server started 
+2014-06-18 15:41:05: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-18 17:12:41: (log.c.164) server started 
+2014-06-18 17:12:41: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:05:01: (log.c.164) server started 
+2014-06-12 15:05:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:34: (server.c.1558) server stopped by UID = 0 PID = 1394 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:01: (log.c.164) server started 
+2014-06-12 15:07:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:00: (log.c.164) server started 
+2000-01-01 00:00:00: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:12: (log.c.164) server started 
+2000-01-01 00:00:12: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:11: (log.c.164) server started 
+2000-01-01 00:00:11: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:13: (log.c.164) server started 
+2000-01-01 00:00:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:27: (log.c.164) server started 
+2000-01-01 00:00:27: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:10: (log.c.164) server started 
+2000-01-01 00:00:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2000-01-01 00:00:09: (log.c.164) server started 
+2000-01-01 00:00:09: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:44: (log.c.164) server started 
+2014-06-12 15:07:44: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:14: (log.c.164) server started 
+2014-06-12 15:07:14: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:41: (log.c.164) server started 
+2014-06-12 15:07:41: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:09: (log.c.164) server started 
+2014-06-12 15:07:09: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:09: (log.c.164) server started 
+2014-06-12 15:07:09: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:10: (log.c.164) server started 
+2014-06-12 15:07:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:10: (log.c.164) server started 
+2014-06-12 15:07:10: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:14: (log.c.164) server started 
+2014-06-12 15:07:14: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:09:47: (log.c.164) server started 
+2014-06-12 15:09:47: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:11:33: (log.c.164) server started 
+2014-06-12 15:11:33: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:22:52: (log.c.164) server started 
+2014-06-12 15:22:52: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:14: (log.c.164) server started 
+2014-06-12 15:07:14: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:15:40: (log.c.164) server started 
+2014-06-12 15:15:40: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2014-06-12 15:07:13: (log.c.164) server started 
+2014-06-12 15:07:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:57:01: (log.c.164) server started 
+2015-02-02 09:57:01: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:36:13: (log.c.164) server started 
+2015-02-02 09:36:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:42:47: (server.c.1558) server stopped by UID = 0 PID = 1438 
+2015-02-02 09:42:13: (log.c.164) server started 
+2015-02-02 09:42:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:47:20: (server.c.1558) server stopped by UID = 0 PID = 1403 
+2015-02-02 09:47:35: (log.c.164) server started 
+2015-02-02 09:47:35: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:47:13: (log.c.164) server started 
+2015-02-02 09:47:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:47:13: (log.c.164) server started 
+2015-02-02 09:47:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:47:13: (log.c.164) server started 
+2015-02-02 09:47:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 
+2015-02-02 09:47:13: (log.c.164) server started 
+2015-02-02 09:47:13: (mod_dirlisting.c.228) pcre support is missing, please install libpcre and the headers 

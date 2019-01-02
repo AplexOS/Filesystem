@@ -1,0 +1,85 @@
+sh: /usr/sbin/chat: not found
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 40 seconds
+send (AT^M)
+expect (OK)
+AT^M^M
+OK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+ATS0=0^M^M
+OK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+ATE0V1^M^M
+OK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","CMNET"^M)
+expect (OK)
+^M
+^M
+OK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+^M
+CONNECT
+ -- got it
+
+send (^M)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 40 seconds
+send (AT^M)
+expect (OK)
+^M
+OK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+^M
+OK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+^M
+OK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","CMNET"^M)
+expect (OK)
+^M
+^M
+OK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+^M
+CONNECT
+ -- got it
+
+send (^M)
