@@ -83,7 +83,7 @@ fi
 #cd /usr/share/web/lighttpd/sbin
 #./lighttpd -f ../config/lighttpd.conf &
 apachectl start &
-
+sync
 sleep 1
 
 # qt app start
@@ -99,3 +99,4 @@ mdev -s
 
 ifconfig eth0 up
 ifconfig eth1 up
+sync
