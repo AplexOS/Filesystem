@@ -1,0 +1,35 @@
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/opt/bin
+
+if [ "$PS1" ]; then
+	if [ "`id -u`" -eq 0 ]; then
+		export PS1='# '
+	else
+		export PS1='$ '
+	fi
+fi
+
+export PAGER='/bin/more '
+export EDITOR='/bin/vi'
+
+# Source configuration files from /etc/profile.d
+for i in /etc/profile.d/*.sh ; do
+	if [ -r "$i" ]; then
+		. $i
+	fi
+	unset i
+done
+
+export PS1='\u@\h:\w # '
+export QTDIR=/usr/local/qt5
+export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/local/qt5/plugins
+#export QT_QPA_PLATFORM=eglfs:fb=/dev/fb0
+export QT_QPA_FONTDIR=/usr/local/qt5/lib/fonts
+export QT_QPA_GENERIC_PLUGINS=evdevtablet:/dev/input/event0
+#export QT_QPA_EVDEV_MOUSE_PARAMETERS=/dev/input/event0
+export LD_LIBRARY_PATH=/usr/local/qt5/lib:$LD_LIBRARY_PATH
+export QML2_IMPORT_PATH=$QTDIR/qml
+#export QT_DEBUG_PLUGINS=1
+export PATH=/usr/local/qt5/bin:$PATH
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+export QT_QPA_EGLFS_KMS_CONFIG=/etc/qt5/eglfs_kms_cfg.json
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#udhcpc
+#cd /usr/my_mqtt
+#
+#./main.py &
+
+

@@ -1,0 +1,14 @@
+prefix=/home/cmi-at751/ti-processor-sdk-linux-am335x-evm-03.03.00.04/linux-devkit/sysroots/armv7ahf-neon-linux-gnueabi/home/cmi_at751/qt5
+exec_prefix=${prefix}
+libdir=/home/cmi_at751/qt5/lib
+includedir=/home/cmi_at751/qt5/include
+
+
+Name: Enginio
+Description: Enginio module
+Version: 1.6.2
+Libs: -L${libdir} -lEnginio 
+Libs.private: -L/home/cmi_at751/qt5/lib -lQt5Network -lQt5Core -lrt -ldl -lpthread   
+Cflags: -I${includedir}/Enginio -I${includedir}
+Requires: Qt5Core Qt5Network
+
