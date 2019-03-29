@@ -1,0 +1,132 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "S90aplex start: "
+
+    #boa &
+
+    echo 44 > /sys/class/gpio/export
+    echo 29 > /sys/class/gpio/export
+    echo 60 > /sys/class/gpio/export
+    echo 31 > /sys/class/gpio/export
+    echo 62 > /sys/class/gpio/export
+    echo 63 > /sys/class/gpio/export
+    echo 56 > /sys/class/gpio/export
+    echo 57 > /sys/class/gpio/export
+    echo 58 > /sys/class/gpio/export
+    echo 59 > /sys/class/gpio/export
+    echo 48 > /sys/class/gpio/export
+    echo 49 > /sys/class/gpio/export
+    echo 50 > /sys/class/gpio/export
+    echo 51 > /sys/class/gpio/export
+    echo 52 > /sys/class/gpio/export
+    echo 53 > /sys/class/gpio/export
+    echo 54 > /sys/class/gpio/export
+    echo 55 > /sys/class/gpio/export
+
+    echo out > /sys/class/gpio/gpio29/direction
+    echo out > /sys/class/gpio/gpio60/direction
+    echo out > /sys/class/gpio/gpio31/direction
+    echo out > /sys/class/gpio/gpio62/direction
+    echo out > /sys/class/gpio/gpio63/direction
+    echo out > /sys/class/gpio/gpio56/direction
+    echo out > /sys/class/gpio/gpio57/direction
+    echo out > /sys/class/gpio/gpio58/direction
+    echo out > /sys/class/gpio/gpio59/direction
+    echo out > /sys/class/gpio/gpio52/direction
+    echo out > /sys/class/gpio/gpio53/direction
+    echo out > /sys/class/gpio/gpio54/direction
+    echo out > /sys/class/gpio/gpio55/direction
+
+    echo in > /sys/class/gpio/gpio48/direction
+    echo in > /sys/class/gpio/gpio49/direction
+    echo in > /sys/class/gpio/gpio50/direction
+    echo in > /sys/class/gpio/gpio51/direction
+    echo in > /sys/class/gpio/gpio44/direction
+
+    #echo 1 > /sys/class/gpio/gpio29/value
+    #echo 1 > /sys/class/gpio/gpio60/value
+    #echo 1 > /sys/class/gpio/gpio31/value
+    #echo 1 > /sys/class/gpio/gpio62/value
+    #echo 1 > /sys/class/gpio/gpio63/value
+    #echo 1 > /sys/class/gpio/gpio56/value
+    #echo 1 > /sys/class/gpio/gpio57/value
+    #echo 1 > /sys/class/gpio/gpio58/value
+    #echo 1 > /sys/class/gpio/gpio59/value
+    #echo 1 > /sys/class/gpio/gpio52/value
+    #echo 1 > /sys/class/gpio/gpio53/value
+    #echo 1 > /sys/class/gpio/gpio54/value
+    #echo 1 > /sys/class/gpio/gpio55/value
+
+    if [ -e /on-off.file ]; then
+        on-off
+    fi
+
+    read_5410_mac
+
+    ln -s /dev/ttyAP1       /dev/ttyO2
+    ln -s /dev/ttyAP5       /dev/ttyO5
+    ln -s /dev/ttysWZA0     /dev/ttyXR79x0
+    ln -s /dev/ttysWZA1     /dev/ttyXR79x1
+    ln -s /dev/ttysWZA2     /dev/ttyXR79x2
+    ln -s /dev/ttysWZA3     /dev/ttyXR79x3
+    ln -s /dev/ttysWZB0     /dev/ttyXR79x4
+    ln -s /dev/ttysWZB1     /dev/ttyXR79x5
+    ln -s /dev/ttysWZB2     /dev/ttyXR79x6
+    ln -s /dev/ttysWZB3     /dev/ttyXR79x7
+    ln -s /dev/ttyAP3       /dev/ttyXR79x8
+    ln -s /dev/ttyAP4       /dev/ttyXR79x9
+    ln -s /dev/ttysWZC0     /dev/ttyXR79x10
+    ln -s /dev/ttysWZC1     /dev/ttyXR79x11
+    ln -s /dev/ttysWZC2     /dev/ttyXR79x12
+    ln -s /dev/ttysWZC3     /dev/ttyXR79x13
+
+    ln -s /sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/eeprom /dev/eeprom
+
+    ln -s /sys/class/gpio/gpio62/value   /dev/GPIO_A
+    ln -s /sys/class/gpio/gpio63/value   /dev/GPIO_B
+
+    ln -s /sys/class/gpio/gpio60/value   /dev/LED_GPIO_0
+    ln -s /sys/class/gpio/gpio31/value   /dev/LED_GPIO_1
+    ln -s /sys/class/gpio/gpio29/value   /dev/RUN_LED
+
+    ln -s /sys/class/gpio/gpio44/value   /dev/RESET_IP
+
+    ln -s /sys/class/gpio/gpio48/value   /dev/DI0
+    ln -s /sys/class/gpio/gpio49/value   /dev/DI1
+    ln -s /sys/class/gpio/gpio50/value   /dev/DI2
+    ln -s /sys/class/gpio/gpio51/value   /dev/DI3
+
+    ln -s /sys/class/gpio/gpio52/value   /dev/DO0
+    ln -s /sys/class/gpio/gpio53/value   /dev/DO1
+    ln -s /sys/class/gpio/gpio54/value   /dev/DO2
+    ln -s /sys/class/gpio/gpio55/value   /dev/DO3
+
+    ln -s /sys/class/gpio/gpio56/value   /dev/GPIO1
+    ln -s /sys/class/gpio/gpio57/value   /dev/GPIO2
+    ln -s /sys/class/gpio/gpio58/value   /dev/GPIO3
+    ln -s /sys/class/gpio/gpio59/value   /dev/GPIO4
+
+    reset_ip &
+
+    #sysrunled  &
+
+    insmod  /lib/ch341.ko
+
+    /etc/init.d/rc start &
+    ;;
+  stop)
+    rmmod ch341
+    echo "S90aplex stop"
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit $?
