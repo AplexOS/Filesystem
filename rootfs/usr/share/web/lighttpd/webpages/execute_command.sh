@@ -31,6 +31,18 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Important System Environment Variables
+DIR=/etc/profile.d
+SCRIPTS=$DIR/*.sh
+
+if [ "$(ls -A $DIR)" ];
+then
+    for f in $SCRIPTS
+    do
+	source $f
+    done
+fi
+
 mkdir -p tmp
 mkdir -p lock
 
@@ -51,7 +63,22 @@ do
 	outputfilename=$item 
   fi
 
-  if [ $i -gt 1 ]
+  if [ $i -eq 2 ]
+  then
+    program_type=$item
+  fi
+
+  if [ $i -eq 3 ]
+  then
+    category=$item
+  fi
+
+  if [ $i -eq 4 ]
+  then
+    win_type=$item
+  fi
+
+  if [ $i -gt 4 ]
   then
     touch "lock/"$item
 
@@ -60,14 +87,46 @@ do
 
 done
 
+if [ $program_type == gui ]
+then
+  /etc/init.d/matrix-gui-2.0 stop
+
+  if [ $category == 3d -o $category == multimedia -o $category == touch -o $win_type == null ]
+  then
+    /etc/init.d/weston stop
+    sleep 1
+  elif [ $win_type == qwindow ]
+  then
+    /etc/init.d/weston stop
+    sleep 1
+    /etc/init.d/qwindow start
+    sleep 1
+  fi
+fi
+
 echo "Filename:"$filename
 echo "Output:"$outputfilename
 eval $filename > "tmp/"$outputfilename 2>&1
 
+if [ $program_type == gui ]
+then
+  if [ $category == 3d -o $category == multimedia -o $category == touch -o $win_type == null ]
+  then
+    /etc/init.d/weston start
+    sleep 1
+  elif [ $win_type == qwindow ]
+  then
+    /etc/init.d/qwindow stop
+    sleep 1
+    /etc/init.d/weston start
+    sleep 1
+  fi
+
+  /etc/init.d/matrix-gui-2.0 start
+fi
+
 #Using a more unique string to detect if the script is completed
 echo "_?!!MATRIX_SCRIPT_COMPLETED!!?_" >> "tmp/"$outputfilename
-
-refresh_screen &
 
 i=0
 

@@ -6,6 +6,8 @@ sync
 sync
 sync
 
+sleep 1
 kill $(pidof matrix_gui)
+sleep 3
 
-/etc/init.d/S99aplex
+/etc/init.d/S99aplex restart

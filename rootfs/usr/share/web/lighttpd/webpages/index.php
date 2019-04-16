@@ -36,7 +36,7 @@
 
 <?php
 	# Check if json.txt file needs to be generated
-	if(!file_exists("json.txt"))
+	if(!file_exists("json.txt") || filesize("json.txt") == 0)
 	{
 		//Generate the json.txt file
 		system("php generate.php");
@@ -69,7 +69,7 @@
 
 <html>
 <head>
-<title>Aplex Application Launcher</title>
+<title>Matrix Application Launcher</title>
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <link rel="stylesheet" type="text/css" href="css/fonts-min.css">
@@ -145,9 +145,8 @@ $(document).ready(function()
 	{
 				$('#complete_container').html(data);
 				$("#back_link").attr("href",link_history[link_history.length-2]);
-        //$("p:contains('Audio')").prev()[0].click();
-        //$("p:contains('title')").prev().click();
 	});
+
 
 });
 

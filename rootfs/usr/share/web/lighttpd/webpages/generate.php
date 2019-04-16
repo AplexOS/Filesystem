@@ -105,6 +105,10 @@ for($x = 0;$x<count($contents)&&strlen($contents[$x])>0;$x++)
 		$top["Description_Link"] = get_contents("X-MATRIX-Description",$dotdesktop);
 
 		$top["Lock"] = get_contents("X-MATRIX-LOCK",$dotdesktop);
+
+		$top["Category"] = get_contents("Categories",$dotdesktop);
+
+		$top["WinType"] = get_contents("WinType",$dotdesktop);
 	} 
 
 	if($category == -1)

@@ -55,6 +55,7 @@ $submenu = isset($_GET["submenu"]) == true ? $_GET["submenu"] : "main_menu" ;
 $found_app = get_application($var,$submenu,$_GET["app"]);
 
 $lock_list = $found_app["Lock"];
+$win_type = $found_app["WinType"];
 
 //Verify that there is a lock specified for this application
 if($lock_list != -1 )
@@ -91,7 +92,14 @@ if($currently_locked==false)
 	$random_string = strval(rand());
 	$random_string .= strval(rand());
 
-	$script_command = "./execute_command.sh \"".addslashes($script_link). "\" ".$random_string.".txt ".$lock_list;
+        if($win_type != -1 )
+	{
+		$script_command = "./execute_command.sh \"".addslashes($script_link). "\" ".$random_string.".txt \"".$found_app["ProgramType"]."\" \"".$found_app["Category"]."\" \"".$found_app["WinType"]."\"  ".$lock_list;
+	}
+	else
+	{
+		$script_command = "./execute_command.sh \"".addslashes($script_link). "\" ".$random_string.".txt \"".$found_app["ProgramType"]."\" \"".$found_app["Category"]."\"  \"wayland\" ".$lock_list;
+	}
 
 	$last_line = system($script_command." > /dev/null 2>/dev/null & ", $retval);
 }

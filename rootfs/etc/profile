@@ -1,5 +1,8 @@
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
+export PAGER='/bin/more '
+export EDITOR='/bin/vi'
+
 if [ "$PS1" ]; then
 	if [ "`id -u`" -eq 0 ]; then
 		export PS1='[\u\h \W]\# '
@@ -8,8 +11,6 @@ if [ "$PS1" ]; then
 	fi
 fi
 
-export PAGER='/bin/more '
-export EDITOR='/bin/vi'
 
 # Source configuration files from /etc/profile.d
 for i in /etc/profile.d/*.sh ; do
