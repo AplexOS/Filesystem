@@ -1,0 +1,8 @@
+{
+	"NodeId":"aplex3",
+	"ManufacturerId":"AplexIot",
+	"ManufacturerName":"AplexIot",
+	"deviceType":"Humidity",
+	"model":"a003",
+	"protocolType":"MQTT"
+}

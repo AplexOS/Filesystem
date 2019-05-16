@@ -1,0 +1,68 @@
+#!/bin/sh
+
+start() {
+    #echo 29 > /sys/class/gpio/export
+    echo 86 > /sys/class/gpio/export
+    echo 87 > /sys/class/gpio/export
+    echo 44 > /sys/class/gpio/export
+    echo 19 > /sys/class/gpio/export
+    echo 20 > /sys/class/gpio/export
+    #echo 117 > /sys/class/gpio/export
+
+    #echo out > /sys/class/gpio/gpio29/direction
+    echo out > /sys/class/gpio/gpio86/direction
+    echo out > /sys/class/gpio/gpio87/direction
+    echo in > /sys/class/gpio/gpio44/direction
+    echo out > /sys/class/gpio/gpio19/direction
+    echo out > /sys/class/gpio/gpio20/direction
+    #echo in > /sys/class/gpio/gpio117/direction
+
+    #ln -s  /sys/class/gpio/gpio29/value /dev/LED1
+    ln -s  /sys/class/gpio/gpio86/value /dev/LED2
+    ln -s  /sys/class/gpio/gpio87/value /dev/LED3
+    ln -s  /sys/class/gpio/gpio44/value /dev/RESET_IP
+    ln -s  /sys/class/gpio/gpio19/value /dev/GPIO8
+    ln -s  /sys/class/gpio/gpio20/value /dev/GPIO9
+    #ln -s  /sys/class/gpio/gpio117/value /dev/GPIO0
+
+    #ln -s /sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/eeprom  /dev/eeprom
+
+    #insmod /lib/ch341.ko
+    #read_mac &
+    #sysrunled &
+    reset_ip &
+
+    if [ -e /on-off.file ]; then
+        on-off
+    fi
+
+    #sleep 5
+    #echo "AT\$QCRMCALL=1,1" > /dev/ttyUSB3
+    #udhcpc -i wwan0
+}
+
+stop() {
+    rmmod ch341
+    echo stop ...
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+
+    stop)
+        stop
+        ;;
+
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+
+esac

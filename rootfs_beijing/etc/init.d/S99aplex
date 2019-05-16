@@ -1,0 +1,17 @@
+echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+mdev -s
+
+if [ -e /on-off.file ]; then
+    on-off
+fi
+
+echo 29 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio29/direction
+echo 0 > /sys/class/gpio/gpio29/value
+
+cd /usr/share/beijing_python/
+./main.py &
+
+ln -s /sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/eeprom  /dev/eeprom
+
+

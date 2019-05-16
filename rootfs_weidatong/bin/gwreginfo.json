@@ -1,0 +1,10 @@
+{
+	"esnfilepath":"./esn.ini",
+    "platformaddr":"139.159.140.34",
+	"platformport":8943,
+	"manufactureid":"AplexIot",
+	"devicetype":"Gateway",
+	"model":"a001",
+	"protocoltype":"MQTT",
+	"loglevel":255
+}

@@ -1,0 +1,79 @@
+{
+    "sensor" :
+        [
+            {
+            "device_id" : "1001",
+            "addr" : 2,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_air",
+            "product" : "zhize_air_temp",
+            "type" : "value_get",
+            "key" :"air_temperature"
+            },
+            {
+            "device_id" : "1101",
+            "addr" : 2,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_air",
+            "product" : "zhize_air_humi",
+            "type" : "value_get",
+            "key" : "air_humidity"
+            },
+            {
+            "device_id" : "1201",
+            "addr" : 2,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_air",
+            "product" : "zhize_light_intensity",
+            "type" : "value_get",
+            "key" : "light_intensity"
+            },
+            {
+            "device_id" : "1301",
+            "addr" : 2,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_air",
+            "product" : "zhize_CO2_concentration",
+            "type" : "value_get",
+            "key" : "CO2_concentration"
+            },
+            {
+            "device_id" : "2001",
+            "addr" : 1,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_soil",
+            "product" : "zhize_soil_temperature",
+            "type" : "value_get",
+            "key" : "soil_temperature"
+            },
+            {
+            "device_id" : "2101",
+            "addr" : 1,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_soil",
+            "product" : "zhize_soil_moisture",
+            "type" : "value_get",
+            "key" : "soil_moisture"
+            },
+            {
+            "device_id" : "2201",
+            "addr" : 1,
+            "com" : "/dev/ttyO1",
+            "vendor" : "zhize_soil",
+            "product" : "zhize_soil_salinity",
+            "type" : "value_get",
+            "key" :"soil_salinity"
+            }
+        ],
+    "sensor_control":
+        [
+            {
+            "device_id" : "3001",
+            "addr" : -1,
+            "product" : "aplex_light_controller",
+            "type" : "value_control",
+            "key" : "light_controller"
+            }
+
+        ]
+}

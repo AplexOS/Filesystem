@@ -3,7 +3,7 @@
 start() {
     echo S99rc start
     cd /usr/share/sensor/
-    ./main.py &
+    #./main.py &
 }
 
 stop() {

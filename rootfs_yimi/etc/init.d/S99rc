@@ -1,0 +1,42 @@
+#!/bin/sh
+
+start() {
+    echo S99rc start
+    #udhcpc -i eth0
+
+    cd /usr/share/sensor/Mqtt_op
+    cp *log ~ -rf
+    sync
+    rm *log*
+    sync
+    #rm *db*
+    ./mqtt_op.py &
+    sync
+}
+
+stop() {
+    killall mqtt_op.py
+    sync
+    echo S99rc stop ...
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+
+    stop)
+        stop
+        ;;
+
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+
+esac

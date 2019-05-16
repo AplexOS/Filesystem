@@ -1,0 +1,14 @@
+{
+    "COM1" :
+    {
+        "port" : "/dev/ttyO1",
+        "baudrate" : 460800,
+        "timeout" : 1
+    },
+    "COM2" :
+    {
+        "port" : "/dev/ttyO2",
+        "baudrate" : 460800,
+        "timeout" : 1
+    }
+}

@@ -1,0 +1,5 @@
+if [ ! -e /root/sd_data ]; then
+    mkdir /root/sd_data -p
+fi
+
+    mount -t vfat /dev/mmcblk0p1  /root/sd_data

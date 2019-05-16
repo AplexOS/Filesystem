@@ -1,0 +1,7 @@
+#!/bin/sh
+
+umount  /root/sd_data
+sync
+umount /dev/mmcblk0p1
+sync
+
