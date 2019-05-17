@@ -1,0 +1,23 @@
+while true
+do
+ifconfig ppp0 > /dev/null 2>&1
+if [ "$?" != "0" ] 
+then
+	killall pppd > /dev/null 2>&1
+	sleep 1
+	pppd call  wcdma-dailer&
+	sleep 20
+else
+	ping -I ppp0 -c 1 www.zhihu.com > /dev/null 2>&1
+	if [ "$?" != "0" ]
+	then
+		route add default gw 10.64.64.64 > /dev/null 2>&1
+		ping -I ppp0 -c 1 www.zhihu.com > /dev/null 2>&1
+		if [ "$?" != "0" ]
+		then	
+			killall pppd > /dev/null 2>&1
+		fi
+	fi
+	sleep 20
+fi
+done

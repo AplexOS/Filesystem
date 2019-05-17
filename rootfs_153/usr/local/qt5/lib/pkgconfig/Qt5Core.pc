@@ -1,0 +1,15 @@
+prefix=/home/cmi-at751/ti-processor-sdk-linux-am335x-evm-03.03.00.04/linux-devkit/sysroots/armv7ahf-neon-linux-gnueabi/home/cmi_at751/qt5
+exec_prefix=${prefix}
+libdir=/home/cmi_at751/qt5/lib
+includedir=/home/cmi_at751/qt5/include
+
+host_bins=${prefix}/bin
+qt_config=minimal-config small-config medium-config large-config full-config fontconfig libudev evdev xkbcommon-evdev gbm linuxfb kms c++11 c++14 c++1z accessibility egl eglfs eglfs_gbm opengl opengles2 shared qpa reduce_exports clock-gettime clock-monotonic posix_fallocate mremap getaddrinfo ipv6ifname getifaddrs inotify eventfd threadsafe-cloexec system-jpeg system-png png system-freetype harfbuzz zlib iconv glib dbus dbus-linked openssl rpath alsa pulseaudio gstreamer-1.0 icu concurrent audio-backend release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.6.2
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lrt -ldl -lpthread -licui18n -licuuc -licudata -L/home/cmi_at751/qt5/lib -lqtpcre -lpthread -ldl -lm -pthread -lgthread-2.0 -lglib-2.0 -lrt  
+Cflags: -I${includedir}/QtCore -I${includedir}
+
