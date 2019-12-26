@@ -1,0 +1,75 @@
+#!/bin/sh
+
+#
+# Start aplex init
+#
+
+case "$1" in
+    start)
+        ln -s /sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/eeprom  /dev/eeprom
+        echo 29  > /sys/class/gpio/export
+        echo out > /sys/class/gpio/gpio29/direction
+
+        ln -s /sys/class/gpio/gpio29/value  /dev/RUN_LED
+
+
+        echo 44  > /sys/class/gpio/export
+
+        echo 110  > /sys/class/gpio/export
+        echo out > /sys/class/gpio/gpio110/direction
+        # echo 1 > /sys/class/gpio/gpio110/value
+
+        echo 111  > /sys/class/gpio/export
+        echo out > /sys/class/gpio/gpio111/direction
+        # echo 1 > /sys/class/gpio/gpio111/value
+
+        # snmpd -c /usr/share/snmp/snmpd.conf &
+
+        if [ -e /on-off.file ]; then
+            on-off
+        fi
+
+        # openvpn --daemon --script-security 3  --config /usr/local/etc/server.conf &
+        reset_ip &
+        read_mac &
+
+        ln -s /dev/ttyUSB0 /dev/ttyS1
+        ln -s /dev/ttyO5 /dev/ttyS2
+        ln -s /dev/ttyO4 /dev/ttyS3
+        ln -s /dev/ttyO3 /dev/ttyS4
+        ln -s /dev/ttyO2 /dev/ttyS5
+        ln -s /dev/ttyO1 /dev/ttyS6
+
+        sysrunled &
+
+        insmod /lib/ch341.ko
+
+        #insmod /lib/mt7601Usta.ko
+        #insmod  /lib/rtutil7601Uap.ko
+        #insmod  /lib/mt7601Uap.ko
+        #insmod  /lib/rtnet7601Uap.ko
+        #sleep 1
+        #/etc/init.d/wifiap.sh &
+        ;;
+    stop)
+        rmmod ch341
+        #rmmod mt7601Usta
+        #rmmod  rtnet7601Uap
+        #rmmod  mt7601Uap
+        #rmmod  rtutil7601Uap
+
+        ;;
+    restart|reload)
+        "$0" stop
+        "$0" start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?
+
+
+
+

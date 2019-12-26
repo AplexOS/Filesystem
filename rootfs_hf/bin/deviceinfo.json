@@ -1,0 +1,8 @@
+{
+	"NodeId":"g84395670",
+	"ManufacturerId":"AplexIot",
+	"ManufacturerName":"AplexIot",
+	"deviceType":"Temperature",
+	"model":"a002",
+	"protocolType":"MQTT"
+}
